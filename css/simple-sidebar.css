@@ -6,43 +6,48 @@
 
 /* Toggle Styles */
 
-#wrapper {
+#submenu-wrapper, 
+#submenu-wrapper.toggled:hover {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    background: inherit;
 }
 
-#wrapper.toggled {
+#submenu-wrapper.toggled {
     padding-left: 250px;
 }
 
-#sidebar-wrapper {
-    z-index: 1000;
+#sidebar-wrapper,
+#submenu-wrapper.toggled:hover #sidebar-wrapper {
+/*     z-index: 1000; */
     position: fixed;
     left: 250px;
     width: 0;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #000;
+    background: inherit;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    border-right: solid 1px #e7e7e7;
 }
 
-#wrapper.toggled #sidebar-wrapper {
+#submenu-wrapper.toggled #sidebar-wrapper {
     width: 250px;
 }
 
-#page-content-wrapper {
+#page-content-wrapper,
+#submenu-wrapper.toggled:hover #page-content-wrapper {
     width: 100%;
     padding: 15px;
 }
 
-#wrapper.toggled #page-content-wrapper {
+#submenu-wrapper.toggled #page-content-wrapper {
     position: absolute;
     margin-right: -250px;
 }
@@ -61,6 +66,7 @@
 .sidebar-nav li {
     text-indent: 20px;
     line-height: 40px;
+    float: none;
 }
 
 .sidebar-nav li a {
@@ -69,7 +75,7 @@
     color: #999999;
 }
 
-.sidebar-nav li a:hover {
+.sidebar-nav li a.toggled:hover {
     text-decoration: none;
     color: #fff;
     background: rgba(255,255,255,0.2);
@@ -90,34 +96,37 @@
     color: #999999;
 }
 
-.sidebar-nav > .sidebar-brand a:hover {
+.sidebar-nav > .sidebar-brand a.toggled:hover {
     color: #fff;
     background: none;
 }
 
-@media(min-width:768px) {
-    #wrapper {
+/* @media(min-width:768px) { */
+    #submenu-wrapper,
+    #submenu-wrapper.toggled.toggled:hover {
         padding-left: 250px;
     }
 
-    #wrapper.toggled {
+    #submenu-wrapper.toggled {
         padding-left: 0;
     }
 
-    #sidebar-wrapper {
+    #sidebar-wrapper,
+    #submenu-wrapper.toggled:hover #sidebar-wrapper {
         width: 250px;
     }
 
-    #wrapper.toggled #sidebar-wrapper {
+    #submenu-wrapper.toggled #sidebar-wrapper {
         width: 0;
     }
 
-    #page-content-wrapper {
+    #page-content-wrapper,
+    #submenu-wrapper.hover #page-content-wrapper {
         padding: 20px;
     }
 
-    #wrapper.toggled #page-content-wrapper {
+    #submenu-wrapper.toggled #page-content-wrapper {
         position: relative;
         margin-right: 0;
     }
-}
+/* } */
