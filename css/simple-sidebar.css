@@ -70,26 +70,26 @@
     list-style: none;
 }
 
-.sidebar-nav li {
+.ManagerBundle .sidebar-nav > li {
     padding-left: 20px;
     line-height: 40px;
     float: none;
 }
 
-.sidebar-nav li a {
+.sidebar-nav > li a {
     display: block;
     text-decoration: none;
     color: #999999;
 }
 
-.sidebar-nav li a.toggled:hover {
+.sidebar-nav > li a.toggled:hover {
     text-decoration: none;
     color: #fff;
     background: rgba(255,255,255,0.2);
 }
 
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
+.sidebar-nav > li a:active,
+.sidebar-nav > li a:focus {
     text-decoration: none;
 }
 
