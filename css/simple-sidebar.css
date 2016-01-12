@@ -141,11 +141,14 @@
         padding-left: 0;
     }
     #sidebar-wrapper {
-          width: 250px;
+          width: 235px;
     }
-    @media(min-width:760px) {
+    @media (min-width: 768px) {
       #submenu-wrapper.toggled:hover #sidebar-wrapper {
-          width: 250px;
+        width: 250px;
+      }
+      #sidebar-wrapper {
+        width: 250px;
       }
     }
     
